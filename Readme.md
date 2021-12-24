@@ -1,13 +1,13 @@
-git clone https://github.com/lixxdee/docker-compose-zabbix-pgsql-grafana.git
+<code>git clone https://github.com/lixxdee/docker-compose-zabbix-pgsql-grafana.git</code>
 
-cd docker-compose-zabbix-pgsql-grafana
+<code>cd docker-compose-zabbix-pgsql-grafana</code>
 
-docker-compose up -d
+<code>docker-compose up -d</code>
 
-docker ps -a
+<code>docker ps -a</code> - make sure all containers are is running
 
-docker inspect zabbix-agent | grep "IPAddress\\": " /// this is ip address you need change in web interface zabbix server.
+<code>docker inspect zabbix-agent | grep "IPAddress\\": "</code> - result ip address you need change in web interface zabbix server.
 
-docker stop/start <your containers>
-  
-docker-compose up -d // build or rebuild docker-compose.yml
+<code>docker restart zabbix-agent</code> - restart zabbix-agent container
+
+Enjoy! :)
